@@ -1,0 +1,9 @@
+######
+create
+.env.docker in backend root
+######
+
+POSTGRES_USER=[username]
+POSTGRES_PASSWORD=[passsword]
+POSTGRES_DB=[db name]
+POSTGRES_PORT=[set port]

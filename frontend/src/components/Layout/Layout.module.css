@@ -1,0 +1,27 @@
+.container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: var(--header-z-index);
+}
+
+.navBar {
+  background-color: var(--color-white);
+  padding: var(--dialog-padding) var(--site-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar ul {
+  display: flex;
+  gap: var(--grid-column-gap);
+}
+
+.navBar li {
+  font-size: 1.5rem;
+}
+
+.mainContainer {
+  position: relative;
+}

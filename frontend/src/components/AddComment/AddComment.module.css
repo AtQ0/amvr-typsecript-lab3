@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.commentContainer {
+  margin-top: 0.5rem;
+}
+
+.isHidden {
+  display: none;
+}
+
+.commentContainer input[type='text'],
+.commentContainer textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+.linkButton {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+.button {
+  margin-top: 1rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.button:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}

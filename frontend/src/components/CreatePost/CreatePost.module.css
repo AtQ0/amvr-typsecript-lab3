@@ -1,0 +1,52 @@
+.container {
+  width: 65vw;
+  margin: 0 auto;
+}
+
+.postContainer {
+  padding: var(--dialog-padding);
+  background-color: var(--color-gray);
+  margin-bottom: var(--site-padding);
+  border-radius: 1rem;
+}
+
+.isHidden {
+  display: none;
+}
+
+.postContainer form {
+  margin-top: 1rem;
+}
+
+.postContainer input[type='text'],
+.postContainer textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+.submitForm div:nth-last-child(2) {
+  margin-bottom: 1rem;
+}
+
+.submitForm > :first-child {
+  margin-top: 2rem;
+}
+
+.button {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.button:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}

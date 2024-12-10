@@ -1,0 +1,33 @@
+:root {
+  /* Globals */
+  --site-padding: 4rem;
+  --site-padding-mob: 1.6rem;
+  --dialog-padding: 2rem;
+  --bottom-gap: 7.2rem;
+  --header-height: 12rem;
+  --grid-column-gap: 4rem;
+  --header-height: 5rem;
+
+  /* COLORS */
+  --primary-color: #fdf0eb;
+  --color-black-rgb: 0, 0, 0;
+  --color-white-rgb: 255, 255, 255;
+  --color-error-rgb: 204, 102, 119;
+  --color-success-rgb: 51, 172, 107;
+  --color-pending-rgb: 231, 142, 70;
+
+  --color-placeholder: #999;
+  --color-gray: rgba(var(--color-black-rgb), 0.08);
+  --color-black: rgb(var(--color-black-rgb));
+  --color-white: rgb(var(--color-white-rgb));
+  --color-black-hover: rgb(var(--color-black-rgb), 0.9);
+
+  --color-error: rgb(var(--color-error-rgb));
+  --color-pending: rgb(var(--color-pending-rgb));
+  --color-success: rgb(var(--color-success-rgb));
+
+  /* Z INDEX */
+  --header-z-index: 100;
+  --dialog-z-index: 50;
+  --backdrop-z-index: 75;
+}

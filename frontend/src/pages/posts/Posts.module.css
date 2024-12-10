@@ -1,0 +1,62 @@
+.container {
+  width: 65vw;
+  margin: 0 auto;
+  padding-top: var(--site-padding);
+}
+.postContainer {
+  padding: var(--dialog-padding);
+  background-color: var(--color-gray);
+  margin-bottom: var(--site-padding);
+  border-radius: 1rem;
+}
+
+.post {
+  margin-bottom: 1rem;
+}
+
+.postContent {
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+}
+
+.postText {
+  font-size: 1.4rem;
+}
+
+.postContent span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.commentContainer {
+  padding: 0 1rem 1rem 1rem;
+  max-width: fit-content;
+  min-width: 20%;
+}
+
+.comment {
+  padding: 1.2rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+}
+
+.userLink {
+  font-size: 1.1rem;
+  font-weight: 600;
+  top: -1rem;
+}
+.userLink:hover {
+  text-decoration: underline;
+}
+
+.commentText {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+.timeCreated {
+  padding: 0.5rem 0 0 1rem;
+  font-size: 1.2rem;
+}
