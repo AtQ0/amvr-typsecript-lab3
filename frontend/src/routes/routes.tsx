@@ -1,13 +1,11 @@
 import { RouteObject } from 'react-router-dom';
-import {
-  Home,
-  UserProfile,
-  EditProfile,
-  Admin,
-  AdminModify,
-  Posts,
-  RegisterUser,
-} from './lazyImports';
+import Admin from '../pages/admin/Admin';
+import AdminModify from '../pages/admin/AdminModify';
+import Home from '../pages/Home';
+import Posts from '../pages/posts/Posts';
+import UserProfile from '../pages/users/[id]/profile';
+import EditProfile from '../pages/users/[id]/editProfile';
+import RegisterUser from '../pages/register/RegisterUser';
 
 export const routes: RouteObject[] = [
   {
@@ -39,3 +37,4 @@ export const routes: RouteObject[] = [
     element: <RegisterUser />,
   },
 ];
+//

@@ -5,7 +5,7 @@ const db = require('../utils');  // Database utility for querying
 exports.createNewUser = async (req, res) => {
     const { email_address, password } = req.body;
 
-    // Simple validation to ensure required fields are provided
+    // Validation to ensure required fields are provided
     if (!email_address || !password) {
         return res.status(400).json({ message: 'Missing email or password' }); // Return JSON error
     }
