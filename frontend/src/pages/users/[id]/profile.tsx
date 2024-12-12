@@ -45,26 +45,26 @@ const UserProfile: FC = () => {
   }, [id]);
 
   return (
-    <Box maxWidth='500px' className={styles.container}>
-      <Card variant='surface'>
-        <h1>{user.first_name + ' ' + user.last_name}</h1>
+    <Box maxWidth="500px" className={styles.container}>
+      <Card variant="surface">
+        <h1>
+          {user.first_name + ' ' + user.last_name}
+        </h1>
         {user.id !== undefined ? (
-          <Flex direction='column' gap='2' key={user.id}>
+          <Flex direction="column" gap="2" key={user.id}>
             <Text>First Name: {user.first_name}</Text>
             <Text>Last Name: {user.last_name}</Text>
             <Text>Role: {user.role}</Text>
-            <Text>Email Address: {user.email_address}</Text>
-            <Text>
+            <Text className="profile-email">Email Address: {user.email_address}</Text> {/* Added class for Cypress */}
+            <Text data-testid="user-dob">
               DOB: {new Date(user.date_of_birth).toISOString().split('T')[0]}
             </Text>
 
-            <Text>
-              Created At:{' '}
-              {new Date(user.created_at).toISOString().split('T')[0]}{' '}
+            <Text data-testid="user-created-at">
+              Created At: {new Date(user.created_at).toISOString().split('T')[0]}
             </Text>
-            <Text>
-              Updated At:{' '}
-              {new Date(user.modified_at).toISOString().split('T')[0]}{' '}
+            <Text data-testid="user-modified-at">
+              Updated At: {new Date(user.modified_at).toISOString().split('T')[0]}
             </Text>
             {/* <Button>Edit</Button> */}
           </Flex>
@@ -77,4 +77,3 @@ const UserProfile: FC = () => {
 };
 
 export default UserProfile;
-// Ryan

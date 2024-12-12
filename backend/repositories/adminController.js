@@ -1,20 +1,6 @@
 const db = require('../utils');
 
-// exports.getAllUsers = async (req, res) => {
-//   try {
-//     const users = await db.query(`
-//       SELECT
-//         app_user.id, app_user.role, app_user.first_name, app_user.last_name,
-//         app_user.email_address, app_user.password, app_user.date_of_birth, app_user.address
-//       FROM app_user
-//       LEFT JOIN address ON app_user.address = address.id
-//       `);
-//     return res.status(200).json(users.rows);
-//   } catch (error) {
-//     console.error(error);
-//     return res.status(500).send('Error fetching data');
-//   }
-// };
+// Existing functions are kept intact, with the new function added below.
 
 exports.getUser = async (req, res) => {
   const { id } = req.params;
@@ -140,4 +126,24 @@ exports.getUsers = async (req, res) => {
       nextCursor: { createdAt: nextCursorCreatedAt },
     },
   ]);
+};
+
+// New function to fetch a user by email
+exports.getUserByEmail = async (req, res) => {
+  const { email } = req.query;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  try {
+    const result = await db.query('SELECT * FROM app_user WHERE email_address = $1', [email]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    return res.status(200).json(result.rows[0]); // Return the user object
+  } catch (error) {
+    console.error('Error fetching user by email:', error);
+    return res.status(500).json({ error: 'An error occurred' });
+  }
 };
